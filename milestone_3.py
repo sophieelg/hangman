@@ -11,6 +11,8 @@ word = random.choice(word_list)
 
 # while loop until user enters a single character
 
+# %%
+
 while True:
     guess = input('Guess a single letter')
 
