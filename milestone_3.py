@@ -1,7 +1,4 @@
 # %%
-from milestone_2 import word_list
-
-# %%
 
 # while loop checks if input is valid guess
 
@@ -13,4 +10,9 @@ while True:
         print('Invalid letter. Please enter a single alphabetical character.')
 
 # checks whether the guess is in the word
+
+# %%
+word_list = ['Banana', 'Apple', 'Orange', 'Strawberry', 'Grape',]
+print(word_list)
+
 # %%
