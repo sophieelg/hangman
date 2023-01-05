@@ -1,6 +1,5 @@
 # %%
 from milestone_2 import word_list
-from milestone_2 import word
 
 # %%
 
@@ -14,10 +13,4 @@ while True:
         print('Invalid letter. Please enter a single alphabetical character.')
 
 # checks whether the guess is in the word
-
-if guess in word:
-    print(f"Good guess! {guess} is in the word.")
-else:
-    print(f"Sorry, {guess} is not in the word. Try again.")
-
 # %%
