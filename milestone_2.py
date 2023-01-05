@@ -11,3 +11,9 @@ print(word_list)
 
 word = random.choice(word_list)
 print(word)
+# %%
+
+# ask the user for an input
+
+guess = input('Enter a single letter')
+# %%
