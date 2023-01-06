@@ -1,4 +1,19 @@
 # %%
+import random
+
+# define possible words
+
+word_list = ['Banana', 'Apple', 'Orange', 'Strawberry', 'Grape',]
+print(word_list)
+# %%
+
+# print random word from list
+
+word = random.choice(word_list)
+print(word)
+# %%
+
+# check if the input is a valid guess
 
 while True:
     guess = input('Guess a single letter')
@@ -6,6 +21,8 @@ while True:
         break
     else:
         print('Invalid letter. Please enter a single alphabetical character.')
+
+# check whether the guess is in the word
 
 if guess in word:
     print(f"Good guess! {guess} is in the word.")
