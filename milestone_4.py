@@ -6,8 +6,6 @@ class Hangman:
         self.word_guessed = len(self.word) * ['_'] # a list of the letters not yet guessed
         self.num_letters = len(set(self.word)) # the number of unique letters in the word that have not been guessed yet
         self.num_lives = num_lives # the number of lives the player has at the start of the game
-        self.word_list = word_list # a list of words
+        self.word_list = ['Banana', 'Apple', 'Orange', 'Strawberry', 'Grape'] # a list of words
         self.list_of_guesses = [] # a list of the guesses that have already been tried.
-
-        word_list = ['Banana', 'Apple', 'Orange', 'Strawberry', 'Grape']
 
