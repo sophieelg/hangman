@@ -127,3 +127,33 @@ def ask_for_input(self):
         self.check_guess(guess)
 ```
 
+## Milestone 5
+
+- New script created called 'milestone_5.py'.
+- Using the class created in Milestone 4, the logic of the game is coded.
+- A function called 'play_game' takes the 'word_list' as a parameter. Inside is the variable 'num_lives' which is defaulted to 5.
+- An instance of the 'Hangman' class is created by calling the class and assiging it to the variable 'game'.
+- Inside the function a while loop  with the condition set to 'True' checks if the number of lives is 0. If it is, the game has ended and a message conveying this is printed to the user.
+- Next, the loop will check if the number of letters left to guess is greater than 0. In this case, the game should continue, so the 'ask_for_input' method is called.
+- If the number of lives is not 0 and the number of letters left is not greater than 0, the user has won the game. A messages is printed to let the user know.
+
+```python
+def play_game(word_list):    
+    num_lives = 5
+    game = Hangman(word_list, num_lives)
+    while True:
+        if game.num_lives == 0:
+            print("You lost!")
+            break
+        elif game.num_letters > 0:
+            game.ask_for_input()
+        elif game.num_lives != 0 and game.num_letters <= 0:
+            print("Congratulations. You won the game!")
+            break
+```
+
+- Lastly, outside the function, the 'play_game' function is called with the 'word_list' passed as an argument to start the game.
+
+```python
+play_game(word_list)
+```
