@@ -3,7 +3,7 @@ import random
 
 # %%
 
-word_list = ['banana', 'apple', 'peach', 'pear', 'grape']
+word_list = ['pear', 'banana', 'apple', 'kiwi', 'grape']
 
 class Hangman:
     def __init__(self, word_list, num_lives=5):
@@ -17,10 +17,11 @@ class Hangman:
     def check_guess(self, guess):
         guess = guess.lower()
         if guess in self.word:
-            print(f"Good guess! {guess} is in the word.")
+            print(f"Good guess! {guess} is in the word.")            
             for position, letter in enumerate(self.word):
                 if letter == guess:
                     self.word_guessed[position] = guess
+                    print(*self.word_guessed)
             self.num_letters -= 1
         else:
             self.num_lives -=1
@@ -34,6 +35,7 @@ class Hangman:
                 print("Invalid letter. Please, enter a single alphabetical character.")        
             elif guess in self.list_of_guesses:
                 print("You already tried that letter!")
+                print(f"So far you have guessed {', '.join(str(x) for x in self.list_of_guesses)}")
             else: 
                 self.list_of_guesses.append(guess)
                 break        
@@ -53,4 +55,5 @@ def play_game(word_list):
             break
 
 play_game(word_list)
+
 # %%
